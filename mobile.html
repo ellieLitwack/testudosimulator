@@ -1,0 +1,25 @@
+<html>
+	<style>
+		.testudo {
+			display: block;
+			width: 50%;
+			height: auto;
+		}
+
+	</style>
+	<body bgcolor="FFFFFF">
+	<p>Offerings are not supported on mobile at this time. Please visit on a computer to make an offering.</p>
+	<img id="main" src="testudo.JPG" alt="testudo" class="testudo">
+	<button type="button" onclick="rubit()" style="font-size : 40px; width: 200px; height: 100px;">Rub Nose</button> 
+	</body>
+<script language="JavaScript1.2">
+var testudo = document.getElementById("main")
+var image = new Image();
+image.src = "noserub.gif";
+
+function rubit()
+{
+	testudo.src = image.src
+}
+</script>
+</html>
