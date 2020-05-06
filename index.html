@@ -28,7 +28,6 @@
 	<img src="cone.png" class="dragme" height=45% alt="traffic cone">
 	</body>
 	<style>
-<!--
 .dragme{
 	position:relative;
 	display: block;
@@ -37,8 +36,9 @@
 }
 </style>
 <script language="JavaScript1.2">
-<!--
-
+if (screen.width <= 699) {
+	document.location = "mobile.html";
+}
 var ie=document.all;
 var nn6=document.getElementById&&!document.all;
 
@@ -94,7 +94,5 @@ document.onmousedown=selectmouse;
 document.ontouchstart=selectmouse;
 document.onmouseup=new Function("isdrag=false");
 document.ontouchend=new Function("isdrag=false");
-
-//-->
 </script>
 </html>
