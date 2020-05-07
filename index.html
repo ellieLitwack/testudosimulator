@@ -11,7 +11,7 @@
 	<button type="button" onclick="rubit()" style="font-size : 20px; width: 100px; height: 50px;">Rub Nose</button> 
 	<p style="LINE-HEIGHT:0px">Number of nose rubs given</p>
 <a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=7290829&style=0008&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" id="counter" height = >
+<img src="https://hitwebcounter.com/counter/counter.php?page=7290829&style=0008&nbdigits=5&type=page&initCount=0" title="User Stats" Alt="PHP Hits Count"   border="0" id="counter">
 </a>  
 	<img id="main" src="testudo.JPG" alt="testudo" class="testudo">
 	<p>Drag and drop to give offerings</p>
@@ -51,12 +51,17 @@ var testudo = document.getElementById("main")
 var counter = document.getElementById("counter")
 var image = new Image();
 image.src = "noserub.gif";
+var rubcount = 0;
 
 function rubit()
 {
 	testudo.src = image.src
 	var timestamp = new Date().getTime();  
 	counter.src = "https://hitwebcounter.com/counter/counter.php?page=7290829&style=0008&nbdigits=5&type=page&initCount=0&t=" + timestamp
+	rubcount = rubcount + 1
+	if (rubcount > 100){
+		alert("Look dude you just rubbed Testudo's nose 100 times in a row. Are you okay?")
+	}
 }
 
 function movemouse(e)
